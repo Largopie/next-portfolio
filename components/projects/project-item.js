@@ -14,10 +14,9 @@ export default function ProjectItem({ data }) {
         className="rounded-xl"
         src={imgSrc}
         alt="cover image"
-        width="100"
-        height="60"
-        layout="responsive"
-        objectFit="cover"
+        width="800"
+        height="800"
+        style={{objectFit: "cover", layout: "responsive"}}
         quality={100}
       />
       <div className="p-4 flex flex-col">
