@@ -17,9 +17,9 @@ export default function Projects({ projects }) {
 
         <h1 className="text-4xl font-bold sm:text-6xl">
           총 프로젝트 : 
-          <span class="pl-4 text-blue-500">{projects.results.length}</span>
+          <span className="pl-4 text-blue-500">{projects.results.length}</span>
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 py-10 m-6 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 py-10 m-6 gap-8">
           {projects.results.map((aProject) => (
             <ProjectItem key={aProject.id} data={aProject} />
           ))}
@@ -52,12 +52,6 @@ export async function getStaticProps() {
 
   const res = await fetch(`https://api.notion.com/v1/databases/${DATABASE_ID}/query`, options)
   const projects = await res.json()
-
-  const projectNames = projects.results.map((aProject) => (
-    aProject.properties.ProjectName.title[0].plain_text
-  ))
-
-  console.log(`projectNames: ${projectNames}`)
 
   return {
     props: { projects },
