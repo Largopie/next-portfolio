@@ -1,13 +1,11 @@
 import Image from 'next/image'
 
 export default function ProjectItem({ data }) {
-
   const title = data.properties.ProjectName.title[0].plain_text
   const description = data.properties.Description.rich_text[0].plain_text
   const github = data.properties.GitHub.url
   const imgSrc = data.cover.file?.url
   const tags = data.properties.Tags.multi_select
-
   return (
     <div className="project-card">
       <Image
@@ -19,7 +17,7 @@ export default function ProjectItem({ data }) {
         style={{objectFit: "cover", layout: "responsive"}}
         quality={100}
       />
-      <div className="p-4 flex flex-col">
+      <div className="flex flex-col p-4">
         <h1 className="text-2xl font-bold">{title}</h1>
         <h1 className="mt-4 text-xl">{description}</h1>
         <a href={github}>깃허브 바로가기</a>
