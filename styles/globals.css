@@ -24,6 +24,35 @@
   @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg hover:text-slate-50
 }
 
+.loading-container {
+  @apply w-24 h-24  top-[50%] left-[50%]
+  animate-spin
+  [&>*:nth-child(1)]:blur-[5px]
+  [&>*:nth-child(2)]:blur-[10px]
+  [&>*:nth-child(3)]:blur-[25px]
+  [&>*:nth-child(4)]:blur-[50px]
+  after:content-['']
+  after:absolute
+  after:top-[10px]
+  after:left-[10px]
+  after:right-[10px]
+  after:bottom-[10px]
+  after:bg-[#fff]
+  after:border-[#fff]
+  after:border-[1px]
+  after:border-solid
+  after:rounded-[50%]
+}
+
+.loading-common {
+  @apply absolute bg-[#9b59b6] rounded-[50%]
+  bg-gradient-to-tr from-[#9b59b6] to-[#84cdfa] to-[#5ad1cd]
+}
+
+.loading-span {
+  @apply h-full w-full
+}
+
 h1, h2, h3, h4, h5, h6 {
   @apply text-slate-900 dark:text-white
 }
