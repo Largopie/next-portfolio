@@ -51,7 +51,10 @@ export default function Footer() {
                   />
                 </svg>
               </a>
-              <a className='ml-3 text-gray-500'>
+              <a
+                href='https://www.linkedin.com/in/jae-seok-song-66abb928a'
+                className='ml-3 text-gray-500'
+              >
                 <svg
                   fill='currentColor'
                   stroke='currentColor'
