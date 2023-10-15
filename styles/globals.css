@@ -25,7 +25,7 @@
 }
 
 .loading-container {
-  @apply w-24 h-24  top-1/2 left-1/2
+  @apply w-24 h-24  top-[50%] left-[50%]
   animate-spin
   [&>*:nth-child(1)]:blur-[5px]
   [&>*:nth-child(2)]:blur-[10px]
